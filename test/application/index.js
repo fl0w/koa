@@ -53,4 +53,9 @@ describe('app', () => {
     process.env.NODE_ENV = NODE_ENV;
     assert.equal(app.env, 'development');
   });
+
+  it('should expose statuses function', () => {
+    const app = new Koa();
+    assert('function' === typeof app.statuses);
+  });
 });
